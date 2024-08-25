@@ -9,6 +9,7 @@ function App() {
 
   const handleSubmit = async () => {
     try {
+      const parsedInput = JSON.parse(jsonInput);
       const res = await axios.post('https://bajajfinserv-backend-wlns.onrender.com', JSON.parse(jsonInput));
       setResponse(res.data);
     } catch (error) {
