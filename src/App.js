@@ -9,7 +9,7 @@ function App() {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post('5000', JSON.parse(jsonInput));
+      const res = await axios.post('https://bajajfinserv-backend-wlns.onrender.com', JSON.parse(jsonInput));
       setResponse(res.data);
     } catch (error) {
       console.error('Invalid JSON or API error:', error);
